@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/march-market/api/api.iml" filepath="$PROJECT_DIR$/march-market/api/api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/march-market/auth-service/auth-service.iml" filepath="$PROJECT_DIR$/march-market/auth-service/auth-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/march-market/cart-service/cart-service.iml" filepath="$PROJECT_DIR$/march-market/cart-service/cart-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/march-market/core-service/core-service.iml" filepath="$PROJECT_DIR$/march-market/core-service/core-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/march-market/front-service/front-service.iml" filepath="$PROJECT_DIR$/march-market/front-service/front-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/march-market/gateway-service/gateway-service.iml" filepath="$PROJECT_DIR$/march-market/gateway-service/gateway-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/march-market7.iml" filepath="$PROJECT_DIR$/.idea/march-market7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/march-market/parent-service.iml" filepath="$PROJECT_DIR$/march-market/parent-service.iml" />
+    </modules>
+  </component>
+</project>

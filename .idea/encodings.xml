@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/march-market/auth-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/march-market/cart-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/march-market/core-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/march-market/front-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/march-market/gateway-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/march-market/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/march-market/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
