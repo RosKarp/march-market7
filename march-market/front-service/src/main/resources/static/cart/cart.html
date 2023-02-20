@@ -25,6 +25,17 @@
             </tbody>
         </table>
         <p></p>
+        <h3>Введите адрес доставки и телефон</h3>
+        <form novalidate> <!--ng-submit="Delivery()"-->
+            <span>Адрес</span>
+            <input class="form-control" type="text" placeholder="address" ng-model="address">
+            <p></p>
+            <span>Телефон</span>
+            <input class="form-control" type="text" placeholder="phone" ng-model="phone">
+            <p></p>
+            <!--<button type="submit" class="btn btn-primary">Save product</button>-->
+        </form>
+        <p></p>
         <button class="btn btn-secondary" ng-click="guestCreateOrder()" ng-show="!isUserLoggedIn()">Оформить заказ</button>
         <button class="btn btn-primary" ng-click="createOrder()" ng-show="isUserLoggedIn()">Оформить заказ</button>
     </div>

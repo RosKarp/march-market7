@@ -10,6 +10,10 @@
                 templateUrl: 'welcome/welcome.html',
                 controller: 'welcomeController'
             })
+            .when('/registration', {
+                templateUrl: 'registration/registration.html',
+                controller: 'regController'
+            })
             .when('/store', {
                 templateUrl: 'store/store.html',
                 controller: 'storeController'

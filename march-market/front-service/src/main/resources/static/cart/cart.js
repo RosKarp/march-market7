@@ -7,10 +7,17 @@ angular.module('market').controller('cartController', function ($scope, $http, $
     };
 
     $scope.createOrder = function () {
-        $http.post('http://localhost:5555/core/api/v1/orders')
+        $http({
+            url: 'http://localhost:5555/core/api/v1/orders/delivery',
+            method: 'POST',
+            params: {
+                address: $scope.address,
+                phone: $scope.phone
+            }
+        //$http.post('http://localhost:5555/core/api/v1/orders')
             .then(function (response) {
                 $scope.loadCart();
-            });
+            })});
     }
 
     $scope.guestCreateOrder = function () {
