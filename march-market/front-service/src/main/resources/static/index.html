@@ -31,6 +31,13 @@
                 <li class="nav-item" ng-show="isUserLoggedIn()">
                     <a class="nav-link" href="#!/orders">Мои заказы</a>
                 </li>
+                <li class="nav-item" ng-show="isUserLoggedIn()">
+                    <a class="nav-link" href="#!/delivery">Доставка</a>             // Эта ссылка не открывает delivery.html, и не запускает delivery.js, независимо от их содержимого.
+                                                                                    // Сейчас там рабочий код из store, для проверки.
+                </li>                                                               // Если здесь заменить delivery на store, то показывает store.html, и список товаров открывается.
+                <li class="nav-item" ng-show="!isUserLoggedIn()">                   // Не представляю как решать проблему, и даже что гуглить :(
+                    <a class="nav-link" href="#!/registration">Регистрация</a>
+                </li>
                 <li class="nav-item" ng-show="!isUserLoggedIn()">
                     <form class="align-middle" ng-submit="tryToAuth()">
                         <div class="input-group input-group-sm" style="padding: 4px;">
@@ -53,12 +60,13 @@
         </div>
     </nav>
 
-    <ng-view></ng-view>
+   <ng-view></ng-view>
 
     <script src="index.js"></script>
     <script src="store/store.js"></script>
     <script src="cart/cart.js"></script>
     <script src="orders/orders.js"></script>
+    <script src="delivery/delivery.js"></script>
     <script src="welcome/welcome.js"></script>
 </div>
 </body>

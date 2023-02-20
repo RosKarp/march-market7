@@ -22,6 +22,10 @@
                 templateUrl: 'orders/orders.html',
                 controller: 'ordersController'
             })
+            .when('/delivery', {
+                templateUrl: 'delivery/delivery.html',
+                controller: 'deliveryController'
+            })
             .otherwise({
                 redirectTo: '/'
             });

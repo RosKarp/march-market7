@@ -27,6 +27,20 @@
         <p></p>
         <button class="btn btn-secondary" ng-click="guestCreateOrder()" ng-show="!isUserLoggedIn()">Оформить заказ</button>
         <button class="btn btn-primary" ng-click="createOrder()" ng-show="isUserLoggedIn()">Оформить заказ</button>
+        <h3>Price filter</h3>
+        <form novalidate ng-submit="loadProducts()">            // Этот блок тоже, почему то, не отображается.
+            <span>min price</span>
+            <input class="form-control" type="number" placeholder="min" ng-model="range.min">
+            <p></p>
+            <span>max price</span>
+            <input class="form-control" type="number" placeholder="max" ng-model="range.max">
+            <p></p>
+            <span>page number</span>
+            <input class="form-control" type="number" placeholder="page" ng-model="range.p">
+            <p></p>
+            <button type="submit" class="btn btn-primary">Filter</button>
+        </form>
+        <p></p>
     </div>
     <div ng-show="cart.items.length == 0">
         <p>Ваша корзина пуста</p>
