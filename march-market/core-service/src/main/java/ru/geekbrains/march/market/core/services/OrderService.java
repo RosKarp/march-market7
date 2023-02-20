@@ -47,4 +47,29 @@ public class OrderService {
     public List<Order> findUserOrders(String username) {
         return orderRepository.findAllByUsername(username);
     }
+
+    @Transactional
+    public void createNewOrderForDelivery(String username, String address, String phone) {
+        CartDto cart = cartServiceIntegration.getCurrentUserCart(username);
+        if (cart.getItems().isEmpty()) {
+            throw new IllegalStateException("Нельзя оформить заказ для пустой корзины");
+        }
+        Order order = new Order();
+        order.setTotalPrice(cart.getTotalPrice());
+        order.setUsername(username);
+        order.setAddress(address);
+        order.setPhone(phone);
+        order.setItems(new ArrayList<>());
+        cart.getItems().forEach(ci -> {
+            OrderItem oi = new OrderItem();
+            oi.setOrder(order);
+            oi.setPrice(ci.getPrice());
+            oi.setQuantity(ci.getQuantity());
+            oi.setPricePerProduct(ci.getPricePerProduct());
+            oi.setProduct(productService.findById(ci.getProductId()).orElseThrow(() -> new ResourceNotFoundException("Product not found")));
+            order.getItems().add(oi);
+        });
+        orderRepository.save(order);
+        cartServiceIntegration.clearCart(username);
+    }
 }

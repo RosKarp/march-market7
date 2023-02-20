@@ -27,4 +27,10 @@ public class OrderController {
     public void createNewOrder(@RequestHeader String username) {
         orderService.createNewOrder(username);
     }
+
+    @PostMapping("/delivery")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void createNewOrderWithAddressAndPhone(@RequestHeader String username, @RequestParam String address, @RequestParam String phone) {
+        orderService.createNewOrderForDelivery(username, address, phone);
+    }
 }

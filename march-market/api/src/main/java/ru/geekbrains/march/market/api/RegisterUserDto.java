@@ -4,6 +4,7 @@ public class RegisterUserDto {
     private String username;
     private String password;
     private String confirmPassword;
+    private String email;
 
     public String getUsername() {
         return username;
@@ -28,6 +29,10 @@ public class RegisterUserDto {
     public void setConfirmPassword(String confirmPassword) {
         this.confirmPassword = confirmPassword;
     }
+
+    public String getEmail() {return email;}
+
+    public void setEmail(String email) {this.email = email;}
 
     // TODO возможно расширение DTO
 }
