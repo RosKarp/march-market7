@@ -25,19 +25,37 @@
             </tbody>
         </table>
         <p></p>
-        <h3>Введите адрес доставки и телефон</h3>
-        <form novalidate> <!--ng-submit="Delivery()"-->
+
+        <h5>Aдрес доставки и телефон обязательны для оформления заказа</h5>
+        <form class="align-middle" ng-submit="createOrder()">
+            <div class="input-group input-group-sm" style="padding: 4px;">
+                <h7>Введите адрес доставки</h7>
+                <input id="navAddressField" class="form-control" ng-model="deliveryDto.address" type="text"
+                       aria-describedby="inputGroup-sizing-sm" style="margin-left: 10px;">
+                <p></p>
+                <h7>Контактный телефон</h7>
+                <input id="navPhoneField" class="form-control" ng-model="deliveryDto.phone" type="text"
+                       aria-describedby="inputGroup-sizing-sm" style="margin-left: 10px;">
+                <p></p>
+
+                <button id="navLoginSubmit" class="btn btn-outline-warning btn-sm"
+                        style="margin-left: 10px;" type="submit">Оформить заказ
+                </button>
+            </div>
+        </form>
+        <!--
+        <form novalidate> ng-submit="Delivery()"
             <span>Адрес</span>
             <input class="form-control" type="text" placeholder="address" ng-model="address">
             <p></p>
             <span>Телефон</span>
             <input class="form-control" type="text" placeholder="phone" ng-model="phone">
             <p></p>
-            <!--<button type="submit" class="btn btn-primary">Save product</button>-->
+            <button type="submit" class="btn btn-primary">Save product</button>
         </form>
         <p></p>
         <button class="btn btn-secondary" ng-click="guestCreateOrder()" ng-show="!isUserLoggedIn()">Оформить заказ</button>
-        <button class="btn btn-primary" ng-click="createOrder()" ng-show="isUserLoggedIn()">Оформить заказ</button>
+        <button class="btn btn-primary" ng-click="createOrder()" ng-show="isUserLoggedIn()">Оформить заказ</button>-->
     </div>
     <div ng-show="cart.items.length == 0">
         <p>Ваша корзина пуста</p>

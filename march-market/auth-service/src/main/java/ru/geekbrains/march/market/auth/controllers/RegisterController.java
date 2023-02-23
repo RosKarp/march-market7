@@ -10,6 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.geekbrains.march.market.api.JwtRequest;
 import ru.geekbrains.march.market.api.JwtResponse;
@@ -25,6 +26,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 @RestController
+@RequestMapping("/api/v1")
 @RequiredArgsConstructor
 public class RegisterController {
     private final UserService userService;

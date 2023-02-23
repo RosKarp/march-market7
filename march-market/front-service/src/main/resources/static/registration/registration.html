@@ -1,18 +1,45 @@
 <div>
-<h3>Регистрация</h3>
+<h5>Регистрация</h5>
+    <form class="align-middle" ng-submit="registration()">
+        <div class="input-group input-group-sm" style="padding: 4px;">
+            <h7>Имя</h7>
+            <input id="navLoginField" class="form-control" ng-model="registerUserDto.username" type="text"
+                   aria-describedby="inputGroup-sizing-sm" style="margin-left: 10px;">
+            <p></p>
+            <h7>Пароль</h7>
+            <input id="navPasswordField" class="form-control" ng-model="registerUserDto.password" type="password"
+                   aria-describedby="inputGroup-sizing-sm" style="margin-left: 10px;">
+            <p></p>
+            <h7>Подтверждение пароля</h7>
+            <input id="navConfirmPassField" class="form-control" ng-model="registerUserDto.confirmPassword" type="password"
+                   aria-describedby="inputGroup-sizing-sm" style="margin-left: 10px;">
+            <p></p>
+            <h7>E-mail</h7>
+            <input id="navEmailField" class="form-control" ng-model="registerUserDto.email" type="text"
+                   aria-describedby="inputGroup-sizing-sm" style="margin-left: 10px;">
+            <p></p>
+
+            <button id="navLoginSubmit" class="btn btn-outline-warning btn-sm"
+                    style="margin-left: 10px;" type="submit">Зарегистрироваться
+            </button>
+        </div>
+    </form>
+
+
+ <!--
 <form novalidate ng-submit="Registration()">
     <span>Имя</span>
     <input class="form-control" type="text" placeholder="name" ng-model="registerUserDto.username">
     <p></p>
     <span>Пароль</span>
-    <input class="form-control" type="text" placeholder="password" ng-model="registerUserDto.password">
+    <input class="form-control" type="password" placeholder="pass" ng-model="registerUserDto.password">
     <p></p>
     <span>Подтверждение пароля</span>
-    <input class="form-control" type="text" placeholder="confirmpass" ng-model="registerUserDto.confirmPassword">
+    <input class="form-control" type="password" placeholder="pass2" ng-model="registerUserDto.confirmPassword">
     <p></p>
     <span>E-mail</span>
     <input class="form-control" type="text" placeholder="e-mail" ng-model="registerUserDto.email">
     <p></p>
     <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
-</form>
+</form>-->
 </div>
