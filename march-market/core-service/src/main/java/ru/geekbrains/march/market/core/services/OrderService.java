@@ -54,6 +54,9 @@ public class OrderService {
         if (cart.getItems().isEmpty()) {
             throw new IllegalStateException("Нельзя оформить заказ для пустой корзины");
         }
+        if(address.isEmpty() || phone.isEmpty()) {
+            throw new IllegalStateException("Введите адрес и телефон");
+        }
         Order order = new Order();
         order.setTotalPrice(cart.getTotalPrice());
         order.setUsername(username);
